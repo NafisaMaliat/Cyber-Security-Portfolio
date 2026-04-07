@@ -278,6 +278,15 @@
   }
   .gallery-thumb:hover{transform:scale(1.04);border-color:var(--accent)}
   .gallery-thumb img{width:100%;height:100%;object-fit:cover}
+  .gallery-section .caption-row{
+    display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;
+  }
+  .gallery-thumb-wrap{flex-shrink:0;width:200px;text-align:center}
+  .gallery-thumb-wrap .gallery-thumb{margin-bottom:6px}
+  .gallery-thumb-wrap .img-caption{
+    font-size:10px;color:var(--text-dim);line-height:1.3;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
 
   /* ── Lightbox ────────────────────────────────────────────────────── */
   .lightbox{
@@ -555,6 +564,22 @@
           <div class="finding-card medium"><h5>Plugin Exposure</h5><p>Theme and component versions revealed, enabling targeted CVE exploitation.</p></div>
           <div class="finding-card medium"><h5>No Rate Limiting</h5><p>No CAPTCHA or brute-force protection observed on login endpoint.</p></div>
         </div>
+
+        <div class="gallery-section">
+          <h3>Evidence Screenshots</h3>
+          <div class="gallery-scroll">
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab5/01-ping-test.png')"><img src="gallery/lab5/01-ping-test.png" alt="Ping connectivity test" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab5/02-wpscan-update.png')"><img src="gallery/lab5/02-wpscan-update.png" alt="WPScan database update" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab5/03-enumeration.png')"><img src="gallery/lab5/03-enumeration.png" alt="WordPress enumeration" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab5/04-user-enum.png')"><img src="gallery/lab5/04-user-enum.png" alt="User enumeration" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab5/05-brute-force.png')"><img src="gallery/lab5/05-brute-force.png" alt="Brute force attack" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab5/06-wp-dashboard.png')"><img src="gallery/lab5/06-wp-dashboard.png" alt="WordPress dashboard access" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab5/07-api-scan.png')"><img src="gallery/lab5/07-api-scan.png" alt="API vulnerability scan" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab5/08-throttled-scan.png')"><img src="gallery/lab5/08-throttled-scan.png" alt="Throttled scan" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab5/09-network-config.png')"><img src="gallery/lab5/09-network-config.png" alt="Network configuration" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab5/10-scan-output.png')"><img src="gallery/lab5/10-scan-output.png" alt="Scan output details" loading="lazy"></div>
+          </div>
+        </div>
       </div>
 
       <!-- ═══ LAB 7 ═══ -->
@@ -585,6 +610,22 @@
           <div class="challenge-item"><div class="challenge-num">9</div><div class="challenge-info"><h5>Mass Dispel</h5><p>Security Misconfiguration — dismiss-all notifications</p></div><div class="stars">★</div></div>
           <div class="challenge-item"><div class="challenge-num">10</div><div class="challenge-info"><h5>Repetitive Registration</h5><p>Improper Input Validation — DRY principle exploitation</p></div><div class="stars">★</div></div>
           <div class="challenge-item"><div class="challenge-num">11</div><div class="challenge-info"><h5>Chatbot / Bonus Payload</h5><p>Broken Access Control — chatbot input reflection & client-side JS exposure</p></div><div class="stars">★★</div></div>
+        </div>
+
+        <div class="gallery-section">
+          <h3>Evidence Screenshots</h3>
+          <div class="gallery-scroll">
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab7/01-docker-setup.png')"><img src="gallery/lab7/01-docker-setup.png" alt="Docker installation" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab7/02-juice-shop-app.png')"><img src="gallery/lab7/02-juice-shop-app.png" alt="Juice Shop application" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab7/03-challenge-start.png')"><img src="gallery/lab7/03-challenge-start.png" alt="Challenge progress" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab7/04-metrics-exploit.png')"><img src="gallery/lab7/04-metrics-exploit.png" alt="Exposed Metrics exploit" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab7/05-xss-attack.png')"><img src="gallery/lab7/05-xss-attack.png" alt="DOM XSS attack" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab7/06-devtools-bypass.png')"><img src="gallery/lab7/06-devtools-bypass.png" alt="DevTools input bypass" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab7/07-ftp-discovery.png')"><img src="gallery/lab7/07-ftp-discovery.png" alt="FTP directory discovery" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab7/08-mass-dispel.png')"><img src="gallery/lab7/08-mass-dispel.png" alt="Mass Dispel challenge" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab7/09-chatbot-challenge.png')"><img src="gallery/lab7/09-chatbot-challenge.png" alt="Chatbot challenge" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab7/10-final-scoreboard.png')"><img src="gallery/lab7/10-final-scoreboard.png" alt="Final scoreboard" loading="lazy"></div>
+          </div>
         </div>
       </div>
 
@@ -638,6 +679,22 @@
           <div class="finding-card low"><h5>Possible CSRF</h5><p>Nmap vuln script flagged WordPress form without token.</p></div>
           <div class="finding-card medium"><h5>IPv6 Exposure</h5><p>SSH and HTTP accessible over both IPv4 and IPv6.</p></div>
         </div>
+
+        <div class="gallery-section">
+          <h3>Evidence Screenshots</h3>
+          <div class="gallery-scroll">
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab8/01-initial-scan.png')"><img src="gallery/lab8/01-initial-scan.png" alt="Initial network scan" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab8/02-host-discovery.png')"><img src="gallery/lab8/02-host-discovery.png" alt="Host discovery" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab8/03-port-scan.png')"><img src="gallery/lab8/03-port-scan.png" alt="Port scanning" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab8/04-service-detect.png')"><img src="gallery/lab8/04-service-detect.png" alt="Service detection" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab8/05-aggressive-scan.png')"><img src="gallery/lab8/05-aggressive-scan.png" alt="Aggressive scan" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab8/06-ssh-session.png')"><img src="gallery/lab8/06-ssh-session.png" alt="SSH session" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab8/07-file-transfer.png')"><img src="gallery/lab8/07-file-transfer.png" alt="SCP file transfer" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab8/08-tunnelling.png')"><img src="gallery/lab8/08-tunnelling.png" alt="SSH tunnelling" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab8/09-nikto-scan.png')"><img src="gallery/lab8/09-nikto-scan.png" alt="Nikto web scan" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab8/10-web-assessment.png')"><img src="gallery/lab8/10-web-assessment.png" alt="Web assessment results" loading="lazy"></div>
+          </div>
+        </div>
       </div>
 
       <!-- ═══ LAB 9 ═══ -->
@@ -683,6 +740,22 @@
           <h4>Verification</h4>
           <p>BMP conversion attempt returned "not allowed by the security policy" — confirming the compensating control is active.</p>
           <code>convert logo: test.bmp → BLOCKED</code>
+        </div>
+
+        <div class="gallery-section">
+          <h3>Evidence Screenshots</h3>
+          <div class="gallery-scroll">
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab9/01-install-nessus.png')"><img src="gallery/lab9/01-install-nessus.png" alt="Nessus installation" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab9/02-start-nessus.png')"><img src="gallery/lab9/02-start-nessus.png" alt="Starting Nessus service" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab9/03-nessus-ui.png')"><img src="gallery/lab9/03-nessus-ui.png" alt="Nessus web interface" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab9/04-network-ping.png')"><img src="gallery/lab9/04-network-ping.png" alt="Network ping verification" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab9/05-gateway-internet.png')"><img src="gallery/lab9/05-gateway-internet.png" alt="Gateway internet access" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab9/06-kali-vulnerabilities.png')"><img src="gallery/lab9/06-kali-vulnerabilities.png" alt="Kali vulnerability results" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab9/07-vuln-detail.png')"><img src="gallery/lab9/07-vuln-detail.png" alt="Vulnerability details" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab9/08-mitigation-code.png')"><img src="gallery/lab9/08-mitigation-code.png" alt="policy.xml mitigation" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab9/09-mitigation-success.png')"><img src="gallery/lab9/09-mitigation-success.png" alt="Mitigation verification" loading="lazy"></div>
+            <div class="gallery-thumb" onclick="openLightbox('gallery/lab9/10-network-forwarding.png')"><img src="gallery/lab9/10-network-forwarding.png" alt="Network forwarding config" loading="lazy"></div>
+          </div>
         </div>
       </div>
 
